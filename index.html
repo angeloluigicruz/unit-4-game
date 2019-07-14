@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crystals Collector</title>
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="game-title">
+            <h1>Crystals Collector!</h1>
+        </div>
+
+        <div class="instructions">
+            <p>You will be given a random number at the start of game. <br><br>
+            
+            There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br><br>
+        
+            You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.<br><br>
+    
+            The value of each crystal is hidden from you until you click on it.<br><br>
+
+            Each time when the game starts, the game will change the values of each crystal.<br><br></p>
+        </div>
+
+        <div class="random-number">
+            <!--Random number will go here-->
+        </div>
+
+        <div class="wins-losses-board">
+            <!--Keeps track of user wins vs losses-->
+            <p>Wins: 
+                <span id= "totalWins"></span>
+                <br>
+                <br>
+                Losses:
+                <span id= "totalLosses"></span>
+            </p>
+        </div>
+
+        <div class="crystals">
+                <button id="red"><img src="assets/images/red-jewel.jpeg" alt="Red Jewel" class="jewel-pic"></button>
+                <button id="blue"><img src="assets/images/blue-jewel.jpeg" alt="Blue Jewel" class="jewel-pic"></button>
+                <button id="purple"><img src="assets/images/purple-jewel.jpeg" alt="Purple Jewel" class="jewel-pic"> </button>
+                <button id="orange"><img src="assets/images/orange-jewel.jpeg" alt="Orange Jewel" class="jewel-pic"></button>
+        </div>
+
+        <div class="score-text">
+            <h6>Your total score is:</h6>
+        </div>
+
+        <div class="total-score">
+            <!--User score will go here-->
+        </div>
+
+        <!-- <script src="assets/javascript/game.js"></script> -->
+        <script>
+
+    $(document).ready(function() {
+        
+        var randomNumber = Math.floor(Math.random() * 120) + 19;
+
+        $(".random-number").text(randomNumber);
+
+
+        var jewel1 = Math.floor(Math.random()*12+1)
+        var jewel2 = Math.floor(Math.random()*12+1)
+        var jewel3 = Math.floor(Math.random()*12+1)
+        var jewel4 = Math.floor(Math.random()*12+1)
+
+        var totalScore = 0;
+        var wins = 0;
+        var losses = 0;
+
+        $('#totalWins').text(wins);
+        $('#totalLosses').text(losses);
+
+        function winner() {
+            alert("Winner!");
+            wins++;
+            $('#totalWins').text(wins);
+        }
+        function loser() {
+            alert("Maybe next time!");
+            losses++;
+            $('#totalLosses').text(losses);
+        }
+
+        $('#red').on ('click', function(){
+            totalScore = totalScore + jewel1;
+            console.log("New totalScore= " + totalScore);
+             $('.totalScore').text(totalScore); 
+
+        if (totalScore == Random){
+          winner();
+        }
+        else if ( totalScore > Random){
+          loser();
+        }
+        });   
+        $('#blue').on ('click', function(){
+            totalScore = totalScore + jewel1;
+            console.log("New totalScore= " + totalScore);
+             $('.totalScore').text(totalScore); 
+
+        if (totalScore == Random){
+          winner();
+        }
+        else if ( totalScore > Random){
+          loser();
+        }
+        }); 
+        $('#purple').on ('click', function(){
+            totalScore = totalScore + jewel1;
+            console.log("New totalScore= " + totalScore);
+             $('.totalScore').text(totalScore); 
+
+        if (totalScore == Random){
+          winner();
+        }
+        else if ( totalScore > Random){
+          loser();
+        }
+        }); 
+        $('#orange').on ('click', function(){
+            totalScore = totalScore + jewel1;
+            console.log("New totalScore= " + totalScore);
+             $('.totalScore').text(totalScore); 
+
+        if (totalScore == Random){
+          winner();
+        }
+        else if ( totalScore > Random){
+          loser();
+        }
+        }); 
+
+    })
+        </script>
+    </body>
+</html>

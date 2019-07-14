@@ -1,0 +1,80 @@
+body {
+    /* background-color: teal; */
+    background: url("../images/background.jpeg");
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: scroll;
+
+
+}
+.jewel-pic {
+    height: 60px;
+    width: 60px;
+    background-color: white;
+}
+
+.game-title {
+    background-color: rgb(209, 153, 0);
+    color: white;
+    border: 1px red;
+    padding: 5px;
+    width: 15%; 
+    margin: 5px;
+    padding: 10px 2px;
+    text-align: center;
+    font: bold;
+}
+
+.instructions {
+    background-color: lightgoldenrodyellow;
+    color: green;
+    border: red;
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
+}
+
+.random-number {
+    background-color: lightgreen;
+    color: purple;
+    border: red;
+    padding: 5px;
+    margin: 5px;
+    width: 15%;
+    height: 55px;
+    float: left;
+}
+
+.wins-losses-board {
+    background-color: turquoise;
+    color: green;
+    border: red;
+    padding: 5px;
+    margin: 5px;
+    width: 7%;
+    height: 55px;
+    float: left;
+}
+
+.crystals {
+    clear: both;
+}
+
+.score-text {
+    background-color: teal;
+    color: white;
+    border: red;
+    padding: 5px;
+    margin: 5px;
+    width: 15%;
+}
+
+.total-score {
+    background-color: teal;
+    color: white;
+    border: red;
+    padding: 5px;
+    margin: 5px;
+    width: 15%;
+    height: 55px;
+}
